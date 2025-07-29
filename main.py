@@ -10,6 +10,8 @@ from datetime import datetime
 import heapq
 import json
 
+from Challenge_1b.process import process_pdfs
+
 # --- Model and NLP Setup ---
 model=SentenceTransformer("/app/cache/sentence_transformers/multi-qa-MiniLM-L6-cos-v1")
 
@@ -35,7 +37,7 @@ def clean_text(text: str) -> str:
 
 # --- Dummy Process Function (Replace with real one from Round 1A) ---
 def process(pdf_path):
-    return process(pdf_path)
+    return process_pdfs(pdf_path)
 
 # --- Main Function to Generate Final Output JSON ---
 def generate_output(input_dir: str, persona: str, job: str, output_path: str):
